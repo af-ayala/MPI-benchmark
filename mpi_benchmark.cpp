@@ -349,7 +349,6 @@ int main(int argc, char *argv[]) {
 // MPI_Allreduce
 // =============
   else if(!strcmp("ALLREDUCE",option_bench)){
-      printf("Iteration\tTime\n");
       MPI_CHECK(MPI_Barrier(MPI_COMM_WORLD));
       t_start = MPI_Wtime();
       for(i = 0; i < num_iterations; i++) {
@@ -358,7 +357,7 @@ int main(int argc, char *argv[]) {
           MPI_CHECK(MPI_Allreduce(buffer_s, buffer_r, size, MPI_SCALAR, MPI_SUM, MPI_COMM_WORLD));
           MPI_CHECK(MPI_Barrier(MPI_COMM_WORLD));
           if(my_rank()==0)
-            printf("%d\t%f\n", size,  tmp_time + MPI_Wtime() );
+            printf("__AA__\t%d\t%f\n", size,  tmp_time + MPI_Wtime() );
       }
       MPI_CHECK(MPI_Barrier(MPI_COMM_WORLD));
       t_end=MPI_Wtime();
@@ -384,6 +383,7 @@ int main(int argc, char *argv[]) {
           MPI_CHECK(MPI_Send(buffer_s, size, MPI_SCALAR, 1, i, MPI_COMM_WORLD));
           MPI_CHECK(MPI_Recv(buffer_r, size, MPI_SCALAR, 1, i, MPI_COMM_WORLD, &status));
           iter_time = MPI_Wtime() - iter_time;
+          printf("__AA__\t%d\t%f\n", size, iter_time);
           max_iter_time = max(max_iter_time, iter_time);
           min_iter_time = min(min_iter_time, iter_time);
       }
