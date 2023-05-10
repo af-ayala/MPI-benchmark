@@ -50,3 +50,12 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+html
+latex
+*~
+.DS_Store
+mpi_benchmark
+mpi_benchmark.o
+
