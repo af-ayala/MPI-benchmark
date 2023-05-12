@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# set CUDA directory
+export CUDADIR=/sw/summit/cuda/11.0.3
+
 CCFLAGS  =	-g -O3 -std=c++11 #-pg
 CC       =  mpicxx $(CCFLAGS)  #-fopenmp
 
