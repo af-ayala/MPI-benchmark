@@ -58,4 +58,5 @@ latex
 .DS_Store
 mpi_benchmark
 mpi_benchmark.o
-
+run.sh
+plot
