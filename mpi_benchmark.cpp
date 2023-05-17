@@ -32,11 +32,11 @@ show_help(char *progname) {
   printf( "                        ALLREDUCE \n");
   printf( "                        \n");
   printf( "                        Non blocking MPI calls\n");
-  printf( "                        SEND_B2B   work only for np=2\n");
-  printf( "                        SEND_BIDIR work only for np=2\n");
+  printf( "                        SEND_B2B   works only for np=2\n");
+  printf( "                        SEND_BIDIR works only for np=2\n");
   printf( "                        \n");
-  printf( "  size is the number of double \n");
-  printf( "  num_iterations is the number of iteration the MPI_operation is going to be performed \n");
+  printf( "  size is the number of scalar elements \n");
+  printf( "  num_iterations is the number of iterations \n");
   printf( " ---------------------------------------------------------------------------------------------- \n");
   printf( "  \n");
   printf( " ---------------------------------------------------------------------------------------------- \n");
